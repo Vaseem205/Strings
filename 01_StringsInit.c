@@ -60,13 +60,22 @@ char *ptr = name;
 
 */
 
+
 /*
 
-NOTE:
+How they are different:
 
-char name[] = "hello"; You cannot reassign the name[] to different string, but the string is editable (the string is saved on function's stack)
+Memory Storage:
+    char name[] → Stores "hello" directly in stack memory.
+    char *name → Stores an address pointing to "hello" in read-only memory.
 
-char *name = "hello"; You can reassign the *name to different string, but the string is not editable (the string is saved on read-only memory)
+Mutability:
+    char name[] → Can modify individual characters.
+    char *name → Cannot modify (read-only string literal).
+
+Reassignment
+    char name[] → Cannot be reassigned (fixed array).
+    char *name → Can be reassigned to another string.
 
 */
 
